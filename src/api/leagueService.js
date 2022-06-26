@@ -30,6 +30,22 @@ export async function getLeague(leagueId) {
   console.error('[LeagueService]', response.status)
 }
 
+export async function simulateWeek(leagueId) {
+  const response = await fetch(
+    `http://localhost:8080/api/v1/simulation/single/${leagueId}`, {
+      method: "POST",
+    }
+  )
+}
+
+export async function simulateAll(leagueId) {
+  const response = await fetch(
+    `http://localhost:8080/api/v1/simulation/all/${leagueId}`, {
+      method: "POST",
+    }
+  )
+}
+
 export function createNewLeague(leagueName) {
   if (leagueName === "")
     return;

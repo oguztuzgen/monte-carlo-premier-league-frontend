@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { createNewLeague, getAllLeagues } from '../api/leagueService';
 
-export default function HomeScreen({navigation}) {
+export default function HomeScreen() {
   const [leagueName, setLeagueName] = useState("")
   const [leagues, setLeagues] = useState([])
 
